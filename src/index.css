@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-primary-light: #166534;
+  --color-primary: #15803D;
+  --color-primary-dark: #052E16;
+  --color-accent: #854D0E;
+  --color-bg-base: #f8faf7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-primary-dark bg-bg-base antialiased;
+  }
+
+  h1, h2, h3, .font-serif {
+    @apply font-serif;
+  }
+}
+
+.editorial-grid {
+  @apply border-primary-dark/10;
+}
+
+.glass-nav {
+  @apply bg-white/95 backdrop-blur-sm border-b border-primary-dark/10;
+}
+
+.btn-primary {
+  @apply px-8 py-3 bg-primary-light text-white text-xs font-bold uppercase tracking-widest hover:bg-primary-dark transition-all duration-300 rounded-none;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 bg-transparent text-primary-dark border border-primary-dark text-xs font-bold uppercase tracking-widest hover:bg-primary-dark hover:text-white transition-all duration-300 rounded-none;
+}
+
+.service-card {
+  @apply p-10 border border-primary-dark/10 bg-white hover:bg-bg-base transition-all duration-500 rounded-none;
+}
